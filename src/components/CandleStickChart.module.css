@@ -1,0 +1,68 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr 10rem;
+  background-color: #e0f2fe;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .root {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+.yAxis {
+  grid: 1 / 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.yMax {
+  border-top: 1px solid black;
+}
+
+.yMin {
+  border-bottom: 1px solid black;
+}
+
+.chart {
+  grid: 2 / 1;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.focusedDay {
+  padding: 0.5rem;
+  background-color: #1d4ed8;
+  color: white;
+  height: 100%;
+}
+
+.focusedDay h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.focusedDay dl {
+  margin: 0.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.5rem;
+}
+
+.focusedDay dt {
+  font-size: 0.75rem;
+}
+
+.focusedDay dd {
+  font-weight: 700;
+  margin: 0;
+}
